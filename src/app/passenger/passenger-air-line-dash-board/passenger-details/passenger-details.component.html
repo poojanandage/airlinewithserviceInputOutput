@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-md-6 offset-3">
+        <div class="card text-warning my-4 bg-dark">
+            <div class="card-header"  [ngClass]="{'alert-success' : getobj.checkedIn === true,'alert-danger' : getobj.checkedIn === false}">
+                <h4 *ngIf="flag">{{getobj.fullname}}</h4>
+                <input type="text" name="" id=""[value]="getobj.fullname" class="form-contorl" *ngIf="!flag">
+            </div>
+           <div class="card-body">
+            <div class="card-title h5">
+                Check in Date : {{(getobj.checkInDate | date)?(getobj.checkInDate | date): 'Not Checked In'}}
+            </div>
+    
+            <div class="card-title h5">
+                Children : {{getobj.children === null ?"0": getobj.children.length}}
+            </div>
+           </div>
+            <div class=" card-footer  text-center">
+                <button class="btn btn-warning alert-warning m-1 px-2"(click)="onclick()" *ngIf="flag">Edit</button>
+                <button class="btn btn-success alert-success m-1 px-2"(click)="onclick()" *ngIf="!flag">Done</button>
+                <button class="btn btn-danger alert-danger m-1 px-2"(click)="onRemoveclick()">Remove</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

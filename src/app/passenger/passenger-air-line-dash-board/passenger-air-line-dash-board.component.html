@@ -1,0 +1,23 @@
+
+
+<section class="py-5  text-white heroImg">
+    <!-- <div>
+        <img src="./../../../assets/images/images.jpeg" alt="">
+    </div> -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-2 text-center">
+                <h1 class=" my-5  primHead">Airline passengers!</h1>
+                <app-passenger-checking [checkInCount]="CheckCount" [totalCheckIn]="passArr.length">
+                </app-passenger-checking>
+                <ul class="nav ">
+                    <li class="nav-item bg-success py-2 px-3 m-4 h6 text-center" *ngFor="let pass of passArr">
+                       {{pass.fullname}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <app-passenger-details [getobj]="obj" *ngFor="let obj of passArr" (sendObj)="onsendObj($event)">
+        </app-passenger-details>
+        </div>
+</section>

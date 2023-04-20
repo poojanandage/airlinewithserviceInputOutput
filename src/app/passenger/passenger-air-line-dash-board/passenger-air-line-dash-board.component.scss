@@ -1,0 +1,46 @@
+
+
+
+.heroImg{
+    background-image: linear-gradient(to right bottom,(rgba(255, 0, 0,.3),rgba(128, 128, 128,.6))),url(./../../../assets/images/planesImg1.jpg);
+    // background-image: ;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+img{
+    background-color: transparent;
+}
+.primHead{
+animation: slider 5s ease-in-out  infinite;
+}
+
+@keyframes slider {
+    0%{
+        transform: translateX(-300px);
+        color:hotpink;
+        font-size: 52px;
+    }
+    25%{
+        transform: translateY(-18px);
+        color: greenyellow;
+        
+    }
+    50%{
+        transform: translateY(18px);
+        color: #fff;
+    
+}
+    75%{
+         transform: translateX(300px);
+         color: purple;
+  
+        }
+    100%{
+        transform: translateX(0px,-10px);
+
+        color: rgb(30, 0, 128);
+        font-size: 52px;
+        }
+}
